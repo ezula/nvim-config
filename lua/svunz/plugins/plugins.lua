@@ -28,7 +28,7 @@ return {
 	{'hrsh7th/cmp-nvim-lsp'},
 
 	{
-		"williamboman/mason.nvim",
+		{ "williamboman/mason.nvim", opts = { ensure_installed = 'prettier' } },
 		"williamboman/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
 	}
