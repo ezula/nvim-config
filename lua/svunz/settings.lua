@@ -1,3 +1,5 @@
+vim.cmd.colorscheme "catppuccin-mocha" -- catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha # catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha # catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
+
 vim.opt.number = true
 vim.opt.relativenumber = true
 

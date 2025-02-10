@@ -41,5 +41,7 @@ return {
             "MunifTanjim/nui.nvim",
             -- {"3rd/image.nvim", opts = {}}, -- Optional image support in preview window: See `# Preview Mode` for more information
         }
-    }
+    },
+
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 }
