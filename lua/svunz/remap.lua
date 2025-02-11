@@ -1,7 +1,12 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+
+-- Neotree stuff
 vim.keymap.set("n", "<leader>e", function()
     vim.cmd("Neotree toggle")
+end)
+vim.keymap.set('n', '<leader>fr', function()
+    vim.cmd("Neotree reveal")
 end)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
