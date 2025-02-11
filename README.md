@@ -1,3 +1,21 @@
+# My awesome nvim config
+
+## Batteries included:
+
+* lazy.nvim plugin manager
+* Mason (for use with lsp-zero)
+* Telescope
+* Harpoon (yeah budy)
+* Undo tree
+* Neotree
+* Nice colors (catppuccin)
+
+and more...
+
+LSP:
+
+Fully functional amazing LSP setup for JavaScript/TypeScript development.
+
 # Install
 
 ## Clone repo
