@@ -28,3 +28,12 @@ vim.opt.colorcolumn = "80"
 
 vim.g.mapleader = " "
 
+-- Stolen from https://github.com/nvim-lua/kickstart.nvim, credz to TJ.
+vim.api.nvim_create_autocmd('TextYankPost', {
+  desc = 'Highlight when yanking (copying) text',
+  group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
+
