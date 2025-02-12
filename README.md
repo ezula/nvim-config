@@ -18,6 +18,11 @@ Fully functional amazing LSP setup for JavaScript/TypeScript development.
 
 # Install
 
+## Requirements / deps
+
+* make
+* fzf
+
 ## Clone repo
 `git clone https://github.com/ezula/nvim-config ~/.config/nvim`
 
@@ -25,9 +30,6 @@ Fully functional amazing LSP setup for JavaScript/TypeScript development.
 `brew install --cask font-<FONT NAME>-nerd-font`
 
 Find a suitable one here: https://www.nerdfonts.com/
-
-## Install ripgrep
-`brew install ripgrep` or `yay -S ripgrep` or similar..
 
 
 ## Setup
