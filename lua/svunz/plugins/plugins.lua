@@ -38,5 +38,15 @@ return {
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
     { 'sbdchd/neoformat' },
+
+    {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        config = true
+        -- use opts = {} for passing setup options
+        -- this is equivalent to setup({}) function
+    },
+
+    { 'JoosepAlviste/nvim-ts-context-commentstring' },
 }
 
