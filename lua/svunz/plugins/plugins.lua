@@ -25,6 +25,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         "neovim/nvim-lspconfig",
     },
+
     {
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v3.x",
@@ -32,7 +33,13 @@ return {
             "nvim-lua/plenary.nvim",
             "nvim-tree/nvim-web-devicons",
             "MunifTanjim/nui.nvim",
-        }
+        },
+        opts = {
+            window = {
+                position = "left",
+                width = 50,
+            },
+        },
     },
 
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
@@ -48,5 +55,15 @@ return {
     },
 
     { 'JoosepAlviste/nvim-ts-context-commentstring' },
-}
 
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
+        ---@module "ibl"
+        ---@type ibl.config
+        opts = {},
+    },
+
+    { "sindrets/diffview.nvim" },
+
+}

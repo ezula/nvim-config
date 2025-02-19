@@ -31,3 +31,11 @@ vim.keymap.set("n", "<leader>f", function()
     vim.lsp.buf.format()
 end)
 
+vim.keymap.set("n", "<leader>df", function()
+    vim.cmd("DiffviewOpen")
+end)
+
+vim.keymap.set("n", "<leader>dfc", function()
+    vim.cmd("DiffviewClose")
+end)
+
