@@ -20,6 +20,10 @@ return {
 
     { 'hrsh7th/cmp-nvim-lsp' },
 
+    { 'nvimtools/none-ls.nvim' },
+
+    { 'tpope/vim-surround' },
+
     {
         { "williamboman/mason.nvim", opts = { ensure_installed = 'prettier' } },
         "williamboman/mason-lspconfig.nvim",

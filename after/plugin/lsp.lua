@@ -9,15 +9,34 @@ require('mason-lspconfig').setup({
     }
 })
 
-require'lspconfig'.eslint.setup({
+--require'lspconfig'.eslint.setup({
+  -- on_attach = function(client, bufnr)
+  --   vim.api.nvim_create_autocmd("BufWritePre", {
+  --     buffer = bufnr,
+  --     -- command = "EslintFixAll",
+  --     command = "Neoformat"
+  --   })
+  -- end,
+-- })
+--
+
+local null_ls = require("null-ls")
+
+null_ls.setup({
+  sources = {
+    null_ls.builtins.formatting.prettier,
+  },
   on_attach = function(client, bufnr)
     vim.api.nvim_create_autocmd("BufWritePre", {
       buffer = bufnr,
-      -- command = "EslintFixAll",
-      command = "Neoformat"
+      callback = function()
+        vim.lsp.buf.format({ async = true })
+      end,
     })
   end,
 })
+
+
 
 -- Reserve a space in the gutter
 vim.opt.signcolumn = 'yes'
@@ -44,8 +63,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', '<leader>rr', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
     vim.keymap.set('n', '<leader>fa', '<cmd>EslintFixAll<cr>', opts)
     -- we use neoformat instead
-    -- vim.keymap.set({'n', 'x'}, '<leader>f', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
-    vim.keymap.set({'n', 'x'}, '<leader>f', '<cmd>Neoformat<cr>', opts)
+    vim.keymap.set({'n', 'x'}, '<leader>f', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
+    -- vim.keymap.set({'n', 'x'}, '<leader>f', '<cmd>Neoformat<cr>', opts)
     vim.keymap.set('n', 'gq', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
 
     vim.api.nvim_create_autocmd({"CursorHold", "CursorHoldI"}, {
