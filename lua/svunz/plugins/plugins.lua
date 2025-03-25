@@ -6,7 +6,7 @@ return {
 
     { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
 
-    { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
+    { 'nvim-treesitter/nvim-treesitter',          build = ':TSUpdate' },
 
     { 'nvim-treesitter/playground' },
 
