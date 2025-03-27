@@ -22,6 +22,19 @@ return {
 
     { 'nvimtools/none-ls.nvim' },
 
+    {
+        'lewis6991/gitsigns.nvim',
+        config = function()
+            require('gitsigns').setup {
+                current_line_blame = true, -- Show inline git blame
+                current_line_blame_opts = {
+                    delay = 500,           -- Delay before showing blame info (in ms)
+                    virt_text_pos = 'eol'  -- Position blame text at end of line
+                }
+            }
+        end
+    },
+
     { 'tpope/vim-surround' },
 
     {
@@ -46,7 +59,7 @@ return {
         },
     },
 
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+    { "catppuccin/nvim",   name = "catppuccin", priority = 1000 },
 
     { 'sbdchd/neoformat' },
 
